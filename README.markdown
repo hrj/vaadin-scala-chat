@@ -1,4 +1,4 @@
-Simple Chat application created with
+**Simple Chat application** created with
   * [Vaadin](http://vaadin.com)
   * [Scala](https://scala-lang.org)
   * [Scaladin](https://vaadin.com/directory#addon/scaladin) and
@@ -11,6 +11,10 @@ Install [sbt 0.11](https://github.com/harrah/xsbt/wiki) and run the following co
     $ sbt gwt-compile container:start
 
 After that the application should be running at [http://localhost:8080/](http://localhost:8080/).
+
+### TODO
+  * Support for multiple chat rooms
+  * Support for Server Push using either Vaadin 7 native support or DontPush addon.
 
 ### Generate project files for Eclipse
 
