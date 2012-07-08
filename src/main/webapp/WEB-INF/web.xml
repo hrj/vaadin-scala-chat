@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="scala-wrappers" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>Scala Vaadin Application</display-name>
+	<context-param>
+		<description>
+		Vaadin production mode</description>
+		<param-name>productionMode</param-name>
+		<param-value>false</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>Scala Vaadin Application</servlet-name>
+		<servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class>
+		<init-param>
+			<description>Vaadin application class to start</description>
+			<param-name>application</param-name>
+			<param-value>view.ChatApp</param-value>
+		</init-param>
+		<init-param>
+			<description>Application widgetset</description>
+			<param-name>widgetset</param-name>
+			<param-value>helper.ChatWidgetset</param-value>
+		</init-param>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Scala Vaadin Application</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+  <session-config>
+    <session-timeout>90</session-timeout> 
+  </session-config>
+
+  <!--
+	<servlet>
+		<description>AtmosphereServlet</description>
+		<servlet-name>AtmosphereServlet</servlet-name>
+		<servlet-class>org.atmosphere.cpr.AtmosphereServlet</servlet-class>
+		<init-param>
+			<!- prevent deadlocks ->
+			<param-name>org.atmosphere.disableOnStateEvent</param-name>
+			<param-value>true</param-value>
+		</init-param>
+    <!-
+    <init-param>
+      <param-name>org.atmosphere.useNative</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <init-param>
+      <param-name>org.atmosphere.useWebSocket</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    ->
+		<load-on-startup>1</load-on-startup>
+		<!-Uncomment if you want to use Servlet 3.0 Async Support ->
+		<async-supported>true</async-supported>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Vaadin Application Servlet</servlet-name>
+		<servlet-class>org.vaadin.dontpush.server.DontPushOzoneServlet</servlet-class>
+		<init-param>
+			<description>Vaadin application class to start</description>
+			<param-name>application</param-name>
+			<param-value>view.ChatApp</param-value>
+		</init-param>
+		<init-param>
+			<description>Application widgetset</description>
+			<param-name>widgetset</param-name>
+			<param-value>helper.ChatWidgetset</param-value>
+		</init-param>
+
+		<init-param>
+			<description>This is optinal parameter that control the 
+			timeout before "Conection guard" is for end user. If you 
+			have lots of synchronous tasks that take long time, you might 
+			want to increase this value to avoid non-intentional red screens. 
+			Default value is 5 seconds.</description>
+			<param-name>connectionGuardTimeout</param-name>
+			<param-value>2</param-value>
+		</init-param>
+
+		<load-on-startup>2</load-on-startup>
+
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AtmosphereServlet</servlet-name>
+		<url-pattern>/UIDL/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Vaadin Application Servlet</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+  -->
+
+</web-app>
