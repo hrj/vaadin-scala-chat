@@ -2,7 +2,7 @@ Simple Chat application created with
   * [Vaadin](http://vaadin.com)
   * [Scala](https://scala-lang.org)
   * [Scaladin](https://vaadin.com/directory#addon/scaladin) and
-  * [Refresher](https://vaadin.com/directory#addon/refresher)
+  * [DontPush](https://vaadin.com/directory#addon/dontpush-ozonelayer)
 
 ### How to run the application?
 
