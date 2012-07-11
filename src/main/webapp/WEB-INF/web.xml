@@ -8,6 +8,11 @@
 		<param-value>false</param-value>
 	</context-param>
 
+  <session-config>
+    <session-timeout>90</session-timeout> 
+  </session-config>
+
+  <!--
 	<servlet>
 		<servlet-name>Scala Vaadin Application</servlet-name>
 		<servlet-class>com.vaadin.terminal.gwt.server.ApplicationServlet</servlet-class>
@@ -27,22 +32,18 @@
 		<servlet-name>Scala Vaadin Application</servlet-name>
 		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
+  -->
 
-  <session-config>
-    <session-timeout>90</session-timeout> 
-  </session-config>
-
-  <!--
 	<servlet>
 		<description>AtmosphereServlet</description>
 		<servlet-name>AtmosphereServlet</servlet-name>
 		<servlet-class>org.atmosphere.cpr.AtmosphereServlet</servlet-class>
 		<init-param>
-			<!- prevent deadlocks ->
+			<!-- prevent deadlocks -->
 			<param-name>org.atmosphere.disableOnStateEvent</param-name>
 			<param-value>true</param-value>
 		</init-param>
-    <!-
+    <!--
     <init-param>
       <param-name>org.atmosphere.useNative</param-name>
       <param-value>false</param-value>
@@ -51,9 +52,9 @@
       <param-name>org.atmosphere.useWebSocket</param-name>
       <param-value>false</param-value>
     </init-param>
-    ->
+    -->
 		<load-on-startup>1</load-on-startup>
-		<!-Uncomment if you want to use Servlet 3.0 Async Support ->
+		<!--Uncomment if you want to use Servlet 3.0 Async Support -->
 		<async-supported>true</async-supported>
 	</servlet>
 
@@ -93,6 +94,5 @@
 		<servlet-name>Vaadin Application Servlet</servlet-name>
 		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
-  -->
 
 </web-app>

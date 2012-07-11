@@ -8,7 +8,7 @@ import vaadin.scala._
 import com.vaadin.terminal.{Sizeable, ExternalResource, ThemeResource}
 import com.vaadin.ui.{Alignment}
 import com.vaadin.event.{ItemClickEvent, ShortcutListener, ShortcutAction}
-import com.github.wolfie.refresher._
+// import com.github.wolfie.refresher._
 
 object ChatData {
   lazy val dataSource = MessageRooms.createRoom
@@ -53,15 +53,17 @@ class ChatWindow(app:ChatApp) extends Window("chat") {
   horizontalSplit.setFirstComponent(tree)
   horizontalSplit.setSecondComponent(roomView)
 
+  /*
   val refresherComponent = new Refresher
   refresherComponent.setRefreshInterval(1000)
   refresherComponent.addListener(new Refresher.RefreshListener {
     def refresh(source:Refresher) { scrollToLast }
   })
+  */
 
 
   setContent(new VerticalLayout(100 pct, 100 pct) {
-    add(refresherComponent)
+    // add(refresherComponent)
     add(createToolbar)
     add(horizontalSplit, ratio = 1)
   })

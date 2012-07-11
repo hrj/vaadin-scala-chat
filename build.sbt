@@ -13,8 +13,8 @@ resolvers += "Vaadin add-ons repository" at "http://maven.vaadin.com/vaadin-addo
 libraryDependencies ++= Seq(
   "com.vaadin" % "vaadin" % "6.8.0",
   "org.vaadin.addons" % "scaladin" % "1.0.0",
-  "org.vaadin.addons" % "refresher" % "1.1.1",
-  // "org.vaadin" % "dontpush-addon-ozonelayer" % "0.4.8",
+  // "org.vaadin.addons" % "refresher" % "1.1.1",
+  "org.vaadin" % "dontpush-addon-ozonelayer" % "0.4.8",
   "ch.qos.logback" % "logback-classic" % "1.0.6"
 )
 
