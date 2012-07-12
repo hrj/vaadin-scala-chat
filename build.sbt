@@ -1,6 +1,8 @@
 name := "scala-chat"
  
 scalaVersion := "2.9.2"
+
+scalacOptions += "-deprecation"
  
 seq(gwtSettings: _*)
 

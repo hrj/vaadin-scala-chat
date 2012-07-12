@@ -2,7 +2,7 @@ import sbt._
 
 object Settings {
 
-  private val jetty = "mort"
+  private val jetty = "new"
 
   private val servletJar = Artifact("javax.servlet", "jar", "jar")
 

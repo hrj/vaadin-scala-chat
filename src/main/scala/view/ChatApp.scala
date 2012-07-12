@@ -6,7 +6,7 @@ import com.vaadin.Application
 import com.vaadin.service.ApplicationContext
 import vaadin.scala._
 import com.vaadin.terminal.{Sizeable, ExternalResource, ThemeResource}
-import com.vaadin.ui.{Alignment}
+import com.vaadin.ui.{Alignment, PasswordField}
 import com.vaadin.event.{ItemClickEvent, ShortcutListener, ShortcutAction}
 import com.github.wolfie.refresher._
 
@@ -156,8 +156,7 @@ class LoginWindow extends Window("authentication required") {
   add ( new Label ("Please login in order to use the application") )
 
   private val login = add(new TextField ( "Username"))
-  private val password = add(new TextField ( "Password") {
-    setSecret(true)
+  private val password = add(new PasswordField ( "Password") {
     addShortcutListener(new helper.EnterListener {
       override def handleAction(sender:Any, target:Any) = submitPassword
     })
